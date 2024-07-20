@@ -1,0 +1,3 @@
+Cara akses:
+1. Tambahkan '/anggota' setelah index.php
+2. Contoh seperti ini: http://localhost/oopmvc/index.php/anggota
