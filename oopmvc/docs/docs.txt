@@ -1,0 +1,2 @@
+Cara akses:
+http://localhost/oopmvc/index.php/anggota

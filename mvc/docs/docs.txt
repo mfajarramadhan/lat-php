@@ -1,0 +1,36 @@
+MVC = 
+- Model untuk mengelola datanya
+- View untuk mengelola tampilannya
+- Controller untuk mengelola prosesnya
+
+1. buat file .htaccess yang berisi Options -Indexes
+
+tujuannya untuk memblok user yang mencoba mengakses folder kita apabila didalam folder tersebut tidak ada file index
+buat file ini per folder
+
+2. buat file .htaccess yang berisi Options -Multiviews 
+
+tujuannya untuk menghindari kesalahan/ambigu Ketika memanggil file didalam folder public ini
+
+3. tulis syntax berikut dibawah Options -Multiviews
+
+- RewriteCond %{REQUEST_FILENAME} !-d
+kalau url yg ditulis adalah folder yg sama dengan method kita, maka abaikan
+
+- RewriteCond %{REQUEST_FILENAME} !-f
+kalau url yg ditulis adalah file yg sama dengan method kita, maka abaikan
+
+- RewriteRule ^(.*)$ index.php?url=$1 [L]
+^ : berfungsi mengambil yg ditulis di url dari awal (dari lokasi folder tempat file ini)
+(.) : ambil apapun yg dituliskan
+(.*) : ambil karakter satu persatu
+(.*)$ : ambil karakter apapun yang dituliskan satu persatu sampai karakternya selesai kecuali enter
+index.php : setelah itu arahkan ke index.php
+?url=$1 : ini adalah placeholder untuk menampung apapun yang dituliskan di ^(.*)$ 
+[L] : kalau ada rule yang sudah terpenuhi jangan jalankan rule lainnya
+
+
+4. Gunakan "" jika didalam string ada variable, '' tidak bisa menggunakan variable didalamnya
+
+5. json_encode : mengubah array associative menjadi json
+

@@ -1,0 +1,34 @@
+1. jika seluruh file adalah php, maka syntax penutup tidak perlukan
+2. constructor otomatis berjalan ketika ada objek/instansi yang dibuat
+3. this merupakan keyword special yang digunakan untuk mengambil variabel global kedalam lokal
+4. membuat class menggunakan awalan huruf besar (Camel Case)
+5. nilai default properti dibuat didalam constructor saja
+6. Setiap parameter dari kelas yang di instansiasi akan di cek apakah sama dengan constructor kelas yang di instansiasi
+
+
+Visibility:
+1. public : bisa di akses dimana saja, bahkan diluar kelas (beresiko)
+2. protected : hanya bisa di akses oleh kelas parent dan childnya
+3. private : hanya bisa di akses oleh kelas tersebut
+
+Kelebihan dan kekurangan:
+- Public lebih mudah di akses dan performancenya lebih cepat, akan tetapi bisa diubah diluar kelas dan beresiko diserang, oleh karena itu kita menggunalan private/protected agar lebih aman dan bisa memberikan validasi di dalam method setter, akan tetapi lebih lambat performancenya karena lebih banyak baris kode
+
+
+Type Hinting/Dependency Injenction:
+- Menggunakan object sebagai parameter dari sebuah method
+public function tambahproduk(Produk $produk){}
+
+
+spl = standart php library
+
+konsep auotoloading:
+1. Buat 3 folder yang bertumpuk
+2. Folder pertama untuk menyimpan index.php yang berisi instansiasi class dari folder ketiga
+3. Folder kedua untuk melakukan require secara otomatis pada folder ketiga menggunakan spl_autoload_register() 
+4. Folder ketiga tempat untuk menyimpan kode program. 1 file berisi 1 class dan penamaan file harus sesuai dengan class 
+
+
+namespace:
+1. Namespace digunakan untuk membedakan nama class yang sama meskipun di folder/module yang berbeda
+2. Aturan penamaan : namespace Vendor(pembuat/nama apk)/Namespace(nama namespace)/sub-namespace

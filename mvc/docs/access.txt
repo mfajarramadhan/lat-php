@@ -1,0 +1,2 @@
+1. Buat folder Bernama 'lat-php'
+2. Lalu letakkan folder mvc di dalam folder lat-php
